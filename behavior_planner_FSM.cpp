@@ -183,15 +183,16 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
     // LOG(INFO) << "Ego distance to stop line: " << distance_to_stop_sign;
 
     // TODO-use distance rather than speed: Use distance rather than speed...
+    
     if (utils::magnitude(ego_state.velocity) <=
-        P_STOP_THRESHOLD_DISTANCE) { // -> Fix this -> Fixed (changed Distance instead of speed)
-      // if (distance_to_stop_sign <= P_STOP_THRESHOLD_DISTANCE) {
+        P_STOP_THRESHOLD_DISTANCE) { // -> Fix this -> Fixed (changed to Distance instead of speed)
+      if (distance_to_stop_sign <= P_STOP_THRESHOLD_DISTANCE) {
       // TODO-move to STOPPED state: Now that we know we are close or at the
       // stopping point we should change state to "STOPPED"
       _active_maneuver = STOPPED;  // <- Fix This -> Fixed
       _start_stop_time = std::chrono::high_resolution_clock::now();
       // LOG(INFO) << "BP - changing to STOPPED";
-    }
+    }}
   } else if (_active_maneuver == STOPPED) {
     // LOG(INFO) << "BP- IN STOPPED STATE";
     // TODO-maintain the same goal when in STOPPED state: Make sure the new goal
@@ -215,3 +216,4 @@ State BehaviorPlannerFSM::state_transition(const State& ego_state, State goal,
   _goal = goal;
   return goal;
 }
+

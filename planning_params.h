@@ -14,7 +14,7 @@
 #include <array>
 
 // Planning Constants
-#define P_NUM_PATHS 9.0                // TODO - Num of paths (goals)
+#define P_NUM_PATHS 7.0                // TODO - Num of paths (goals)
 #define P_LOOKAHEAD_MIN 8.0            // m
 #define P_LOOKAHEAD_MAX 20.0           // m
 #define P_LOOKAHEAD_TIME 1.5           // s
@@ -65,3 +65,4 @@ constexpr double CONFORT_MAX_LAT_ACCEL = 1.0;  // m/s2
 
 constexpr double MIN_MANEUVER_TIME = dt * 10;  // min steps
 constexpr double MAX_MANEUVER_TIME = dt * 75;  // max steps
+
