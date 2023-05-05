@@ -18,4 +18,8 @@ The project also includes a number of additional features, such as the ability t
 The project is a valuable learning experience for anyone interested in self-driving cars. It provides an introduction to the two main components of a traditional hierarchical planner, and it gives students (me personally) the opportunity to implement these components in a real-world application.
 
 ### In here is the car in motion (Fig Below)
-![Alt text](media/Planning%20&%20Motion%20in%20action.gif)
+![Alt text](media/Planning%20&%20Motion%20in%20action%20low.gif)
+
+And Here is the video
+
+[label](media/Planning%20&%20Motion%20in%20action.mp4)
